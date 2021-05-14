@@ -1,6 +1,8 @@
 # EE800 2021 Spring Wuwei Zhu
-# Mask Detection using YOLOv3-SE 
-## 0. Dataset description and data pre-processing
+## 0. Mask Detection using YOLOv3-SE 
+This project focuses on how to insert SE block into YOLOv3 and YOLOv3-tiny to help them improve their performance
+
+## 1. Dataset description and data pre-processing
 The original dataset link: <https://www.kaggle.com/andrewmvd/face-mask-detection>.
 This dataset contains 853 images belonging to the 3 classes, as well as their bounding boxes in the PASCAL VOC format.
 The classes are:
