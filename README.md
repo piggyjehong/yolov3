@@ -76,24 +76,30 @@ YOLOv3-tiny-SE cfg is shown on the below.
 
 Add the SE class into models.py
 
-  class SELayer(nn.Module):
-    def __init__(self, channel, reduction=16):
-        super(SELayer, self).__init__()
-        self.avg_pool = nn.AdaptiveAvgPool2d(1)
-        self.fc = nn.Sequential(
-            nn.Linear(channel, channel // reduction, bias=False),
-            nn.ReLU(inplace=True),
-            nn.Linear(channel // reduction, channel, bias=False),
-            nn.Sigmoid()
-        )
+    class SELayer(nn.Module):
+      def __init__(self, channel, reduction=16):
+          super(SELayer, self).__init__()
+          self.avg_pool = nn.AdaptiveAvgPool2d(1)
+          self.fc = nn.Sequential(
+              nn.Linear(channel, channel // reduction, bias=False),
+              nn.ReLU(inplace=True),
+              nn.Linear(channel // reduction, channel, bias=False),
+              nn.Sigmoid()
+          )
 
-    def forward(self, x):
-        b, c, _, _ = x.size()
-        y = self.avg_pool(x).view(b, c)
-        y = self.fc(y).view(b, c, 1, 1)
-        return x * y.expand_as(x)
+      def forward(self, x):
+          b, c, _, _ = x.size()
+          y = self.avg_pool(x).view(b, c)
+          y = self.fc(y).view(b, c, 1, 1)
+          return x * y.expand_as(x)
 
+Add below part into create_modules
 
+    elif mdef['type'] == 'se':
+                modules.add_module(
+                    'se_module',
+                    SELayer(output_filters[-1], reduction=int(mdef['reduction'])))
+                    
 ## References
 1. png2jpg.ipynb: <https://blog.csdn.net/weixin_40446557/article/details/104059660>
 2. data pre-processing: <https://github.com/pprp/voc2007_for_yolo_torch>
