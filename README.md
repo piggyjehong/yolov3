@@ -34,8 +34,7 @@ A traditional PASCAL VOC structure should have the following structure:
 Therefore, we have to do some data pre-processing in order to make the original dataset fit the YOLO model.
 Finally, our COCO format Face Mask Detection dataset has the following structure:
 ```
-  - coco
-       
+  - voc
             - 2007_test.txt
             - 2007_train.txt
             - images
@@ -50,6 +49,7 @@ Finally, our COCO format Face Mask Detection dataset has the following structure
             - train.txt
             - trainval.txt
             - val.txt
+           
 ```
 ## References
 1. png2jpg.ipynb: <https://blog.csdn.net/weixin_40446557/article/details/104059660>
