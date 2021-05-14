@@ -53,8 +53,15 @@ Finally, our COCO format Face Mask Detection dataset has the following structure
             - val.txt
            
 ```
+## 2. Create cfg file
 
+YOLOv3-SE's cfg file is shown on the below.
 
+<img src="https://github.com/piggyjehong/yolov3/blob/main/Results/Darknet53.jpg">
+
+YOLOv3-tiny-SE cfg is shown on the below.
+
+<img src="https://github.com/piggyjehong/yolov3/blob/main/Results/tiny.jpg">
 ## References
 1. png2jpg.ipynb: <https://blog.csdn.net/weixin_40446557/article/details/104059660>
 2. data pre-processing: <https://github.com/pprp/voc2007_for_yolo_torch>
