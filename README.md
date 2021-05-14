@@ -62,6 +62,16 @@ YOLOv3-SE's cfg file is shown on the below.
 YOLOv3-tiny-SE cfg is shown on the below.
 
 <img src="https://github.com/piggyjehong/yolov3/blob/main/Results/tiny.jpg">
+
+## 3. Modify utils/parse_config.py
+
+    supported = ['type', 'batch_normalize', 'filters', 'size', 'stride', 'pad', 'activation', 'layers', 'groups',
+                 'from', 'mask', 'anchors', 'classes', 'num', 'jitter', 'ignore_thresh', 'truth_thresh', 'random',
+                 'stride_x', 'stride_y', 'weights_type', 'weights_normalization', 'scale_x_y', 'beta_nms', 'nms_kind',
+                 'iou_loss', 'iou_normalizer', 'cls_normalizer', 'iou_thresh', 'probability', 'reduction', 'ratio', 'kernelsize']
+
+## 4. Modify models.py
+
 ## References
 1. png2jpg.ipynb: <https://blog.csdn.net/weixin_40446557/article/details/104059660>
 2. data pre-processing: <https://github.com/pprp/voc2007_for_yolo_torch>
