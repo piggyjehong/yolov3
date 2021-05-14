@@ -3,6 +3,8 @@
 This project focuses on how to insert SE block into YOLOv3 and YOLOv3-tiny to help them improve their performance.
 
 ## 1. Dataset description and data pre-processing
+Dataset used in this project can be downloaded from: <https://pan.baidu.com/s/1aBv6Mi28ICAQEiHG7lvL3Q>. Password: y7uq 
+
 The original dataset link: <https://www.kaggle.com/andrewmvd/face-mask-detection>.
 This dataset contains 853 images belonging to the 3 classes, as well as their bounding boxes in the PASCAL VOC format.
 The classes are:
