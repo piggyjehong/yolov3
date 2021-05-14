@@ -1,10 +1,10 @@
 # EE800 2021 Spring Wuwei Zhu
 ## 0. Mask Detection using YOLOv3-SE 
 This project focuses on how to insert SE block into YOLOv3 and YOLOv3-tiny to help them improve their performance.
+<img src="https://github.com/piggyjehong/yolov3/blob/main/Results/test_batch0_pred.jpg">
 
 ## 1. Dataset description and data pre-processing
-Dataset used in this project can be downloaded from: <https://pan.baidu.com/s/1aBv6Mi28ICAQEiHG7lvL3Q>. Password: y7uq 
-
+Our customed dataset can be downloaded from: 
 The original dataset link: <https://www.kaggle.com/andrewmvd/face-mask-detection>.
 This dataset contains 853 images belonging to the 3 classes, as well as their bounding boxes in the PASCAL VOC format.
 The classes are:
@@ -36,7 +36,7 @@ A traditional PASCAL VOC structure should have the following structure:
 Therefore, we have to do some data pre-processing in order to make the original dataset fit the YOLO model.
 Finally, our COCO format Face Mask Detection dataset has the following structure:
 ```
-          - voc
+        - voc
             - 2007_test.txt (test set path)
             - 2007_train.txt (training set path)
             - images
@@ -53,6 +53,8 @@ Finally, our COCO format Face Mask Detection dataset has the following structure
             - val.txt
            
 ```
+
+
 ## References
 1. png2jpg.ipynb: <https://blog.csdn.net/weixin_40446557/article/details/104059660>
 2. data pre-processing: <https://github.com/pprp/voc2007_for_yolo_torch>
